@@ -3,7 +3,7 @@ import { useDocumentContext } from "src/contexts/DocumentContext/DocumentContext
 import { base64toFile } from "src/helpers/base64toFile";
 
 export const useWebcamFileLoader = () => {
-  const webcamRef = useRef(null);
+  const webcamRef = useRef<any>(null);
   const { uploadFile } = useDocumentContext();
   const [showWebcam, setShowWebcam] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth < 550 ? window.innerWidth : 550);

@@ -3,7 +3,7 @@ import { useDocumentContext } from "src/contexts/DocumentContext/DocumentContext
 import { base64toFile } from "src/helpers/base64toFile";
 
 export const useRealTimeWebcamFileLoader = () => {
-  const webcamRef = useRef(null);
+  const webcamRef = useRef<any>(null);
   const intervalId = useRef<number>();
   const {
     startLifeRecording,
@@ -53,7 +53,7 @@ export const useRealTimeWebcamFileLoader = () => {
           if (webcamRef.current.getScreenshot()) {
             startLifeRecording(
               base64toFile(
-                webcamRef.current.getScreenshot(),
+                webcamRef.current?.getScreenshot(),
                 "document_capture.jpeg"
               )
             );

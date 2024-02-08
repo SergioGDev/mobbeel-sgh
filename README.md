@@ -31,6 +31,7 @@ This application provides a fundamental functionality: analyzing images to ascer
 To provide images, you can do so in the following ways:
 - Attach an image
 - Take a photo of the document
+- Take the image of a document with a real time video
 
 ### Screenshots
 
