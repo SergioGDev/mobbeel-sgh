@@ -1,11 +1,14 @@
 export type DocumentContextType = {
   isLoading: boolean;
-  errorMsg?: string;  
+  errorMsg?: string;
+  decodingInRealTime?: boolean;
   decodedFile?: string;
 };
 
 export type DocumentContextProps = DocumentContextType & {
   uploadFile: (file: File) => void;
+  startLifeRecording: (file: File) => void;
+  endLifeRecording: () => void;  
 };
 
 export type MobbResp = {

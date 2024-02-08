@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { base64toFile } from "../webcamFileLoader.helpers";
-import { useDocumentContext } from "../../../../contexts/DocumentContext/DocumentContextProvider";
+import { useDocumentContext } from "src/contexts/DocumentContext/DocumentContextProvider";
+import { base64toFile } from "src/helpers/base64toFile";
 
 export const useWebcamFileLoader = () => {
   const webcamRef = useRef(null);

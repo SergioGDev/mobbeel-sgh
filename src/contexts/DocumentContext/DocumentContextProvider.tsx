@@ -15,6 +15,34 @@ export const DocumentContextProvider = ({ children }: PropsWithChildren) => {
     initialDocumentContextState
   );
 
+  const startLifeRecording = async (file: File) => {
+    dispatch({ type: "startLifeRecording" });
+
+    try {
+      const resp = await axios.postForm(mobbscanUrl, {
+        licenseId: "mobbscan-challenge",
+        documentType: "TD1",
+        documentSide: "front",
+        returnCroppedImage: true,
+        image: file,
+      });
+
+      if (!resp) throw Error("Backend Error");
+      const data = resp.data as MobbResp;
+      console.log(data);
+
+      if (data.code === "OK" && data.imageDocumentDetected) {
+        dispatch({ type: "okUploadFile", payload: data.imageDocumentDetected });
+      }
+    } catch (error) {
+      dispatch({ type: "errorUploadFile", payload: error as string });
+    }
+  };
+
+  const endLifeRecording = () => {
+    dispatch({ type: "endLifeRecording" });
+  };
+
   const uploadFile = async (file: File) => {
     dispatch({ type: "startUploadingFile" });
 
@@ -27,16 +55,15 @@ export const DocumentContextProvider = ({ children }: PropsWithChildren) => {
         image: file,
       });
 
-      if (!resp) throw Error('No resp from backend');
-      const data = (resp.data) as MobbResp;
+      if (!resp) throw Error("Backend Error");
+      const data = resp.data as MobbResp;
       console.log(data);
 
-      if (data.code === 'OK' && data.imageDocumentDetected) {
-        dispatch({ type: 'okUploadFile', payload: data.imageDocumentDetected })        
-      } else if (data.code === 'ERROR') {
+      if (data.code === "OK" && data.imageDocumentDetected) {
+        dispatch({ type: "okUploadFile", payload: data.imageDocumentDetected });
+      } else if (data.code === "ERROR") {
         dispatch({ type: "errorUploadFile", payload: data.description });
-      }      
-
+      }
     } catch (error) {
       dispatch({ type: "errorUploadFile", payload: error as string });
     }
@@ -47,6 +74,8 @@ export const DocumentContextProvider = ({ children }: PropsWithChildren) => {
 
     // Add here the methods of the provider
     uploadFile,
+    startLifeRecording,
+    endLifeRecording,
   };
 
   return (

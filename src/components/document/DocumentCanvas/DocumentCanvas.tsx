@@ -1,4 +1,4 @@
-import { useDocumentContext } from "../../../contexts/DocumentContext/DocumentContextProvider";
+import { useDocumentContext } from "src/contexts/DocumentContext/DocumentContextProvider";
 import styles from "./DocumentCanvas.module.scss";
 
 const DocumentCanvas = () => {

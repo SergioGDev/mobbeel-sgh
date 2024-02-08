@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { useDocumentContext } from "../../../../contexts/DocumentContext/DocumentContextProvider";
+import { useDocumentContext } from "src/contexts/DocumentContext/DocumentContextProvider";
 
 export const useInputFileLoader = () => {
   const [fileContent, setFileContent] = useState<File>();

@@ -1,7 +1,6 @@
 import styles from "./MainPage.module.scss";
-
-import DocumentCanvas from "../../components/document/DocumentCanvas/DocumentCanvas";
-import FileLoaderWidget from "../../widgets/FileLoaderWidget/FileLoaderWidget";
+import FileLoaderWidget from "src/widgets/FileLoaderWidget/FileLoaderWidget";
+import DocumentCanvas from "src/components/document/DocumentCanvas/DocumentCanvas";
 
 const MainPage = () => {
 
