@@ -33,6 +33,11 @@ To provide images, you can do so in the following ways:
 - Take a photo of the document
 - Take the image of a document with a real time video
 
+### Deploy (CI)
+The app is deployed on the site: https://sgh-mobbeel-technical-challenge.netlify.app/
+
+It's linked to this repository and when I push my changes to the main branch of this repository they are automatically deployed to the Netlify environment.
+
 ### Screenshots
 
 ![Select photo option](src/assets/readme_options.png)
