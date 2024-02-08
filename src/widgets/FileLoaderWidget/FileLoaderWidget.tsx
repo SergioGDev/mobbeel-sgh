@@ -1,9 +1,9 @@
 import { ChangeEvent, useState } from "react";
 import styles from "./FileLoaderWidget.module.scss";
 
-import InputFileLoader from "../../components/InputFileLoader/InputFileLoader";
-import LoaderSpinner from "../../components/LoaderSpinner/LoaderSpinner";
-import WebcamFileLoader from "../../components/WebcamFileLoader/WebcamFileLoader";
+import InputFileLoader from "../../components/document/InputFileLoader/InputFileLoader";
+import LoaderSpinner from "../../components/ui/LoaderSpinner/LoaderSpinner";
+import WebcamFileLoader from "../../components/document/WebcamFileLoader/WebcamFileLoader";
 import { useDocumentContext } from "../../contexts/DocumentContext/DocumentContextProvider";
 import {
   VIDEO_CAMERA,
