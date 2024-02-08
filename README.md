@@ -28,14 +28,12 @@ In order to have a structured code, I've decided to order de paths of the projec
 ### How to use the app
 This application provides a fundamental functionality: analyzing images to ascertain the presence of documents. By submitting an image, the application utilizes an advanced document detection system to identify and extract identification documents. If the image contains a document, the application visually displays the specific snippet of that document, offering an effective solution for digital identification and visual presentation of documents.
 
-![Options](image.png)
-
 To provide images, you can do so in the following ways:
 - Attach an image
 - Take a photo of the document
 
 ### Screenshots
 
-![Select photo option](assets/readme_options.png)
-![Select a photo](assets/readme_select_photo.png)
-![Take a photo](assets/readme_take_photo.png)
+![Select photo option](src/assets/readme_options.png)
+![Select a photo](src/assets/readme_select_photo.png)
+![Take a photo](src/assets/readme_take_photo.png)
