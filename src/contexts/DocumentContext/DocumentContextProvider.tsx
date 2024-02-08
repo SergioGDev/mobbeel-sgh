@@ -33,8 +33,9 @@ export const DocumentContextProvider = ({ children }: PropsWithChildren) => {
 
       if (data.code === 'OK' && data.imageDocumentDetected) {
         dispatch({ type: 'okUploadFile', payload: data.imageDocumentDetected })        
-      }
-      
+      } else if (data.code === 'ERROR') {
+        dispatch({ type: "errorUploadFile", payload: data.description });
+      }      
 
     } catch (error) {
       dispatch({ type: "errorUploadFile", payload: error as string });

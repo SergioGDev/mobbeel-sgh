@@ -5,3 +5,9 @@
   padding: 2rem;
   text-align: center;
 }
+
+@media (max-width: 599px) {
+  #root {
+    padding: 2rem 10px;
+  }
+}

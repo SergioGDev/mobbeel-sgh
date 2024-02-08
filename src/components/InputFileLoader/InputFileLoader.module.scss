@@ -5,3 +5,10 @@
   flex-direction: row;
   gap: 20px;
 }
+
+@media (max-width: 599px) {
+  .inputContainer {
+    flex-direction: column;
+    gap: 10px;
+  }  
+}

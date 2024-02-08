@@ -1,0 +1,52 @@
+{
+  "hash": "be69a361",
+  "configHash": "e0e82998",
+  "lockfileHash": "98c4d437",
+  "browserHash": "337beb76",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "34b21944",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "5cde7fb1",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "514a40f4",
+      "needsInterop": true
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "2b4267ca",
+      "needsInterop": false
+    },
+    "react-loader-spinner": {
+      "src": "../../node_modules/react-loader-spinner/dist/module.js",
+      "file": "react-loader-spinner.js",
+      "fileHash": "37418031",
+      "needsInterop": false
+    },
+    "react-webcam": {
+      "src": "../../node_modules/react-webcam/dist/react-webcam.js",
+      "file": "react-webcam.js",
+      "fileHash": "e2ab035f",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-FQO5W7GE": {
+      "file": "chunk-FQO5W7GE.js"
+    },
+    "chunk-ZS7NZCD4": {
+      "file": "chunk-ZS7NZCD4.js"
+    }
+  }
+}
