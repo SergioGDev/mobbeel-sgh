@@ -6,16 +6,16 @@ import { videoConstraints } from "./realTimeWebcamFileLoader.consts";
 const RealTimeWebcamFileLoader = () => {
   const {
     decodingInRealTime,
-    toggleInterval,
     screenWidth,
     webcamRef,
     showWebcam,
+    setShowWebcam,
   } = useRealTimeWebcamFileLoader();
 
   return (
     <div className={styles.container}>
       <div className={styles.buttonsContainer}>
-        <button onClick={toggleInterval}>
+        <button onClick={() => setShowWebcam(!showWebcam)}>
           {showWebcam ? "Close" : "Show"} webcam
         </button>
       </div>

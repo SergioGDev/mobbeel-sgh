@@ -28,10 +28,12 @@ export const DocumentContextProvider = ({ children }: PropsWithChildren) => {
       });
 
       if (!resp) throw Error("Backend Error");
+      // If we already have an document, don't need a new one
+      if (documentData.decodedFile) return;
       const data = resp.data as MobbResp;
-      console.log(data);
-
+      
       if (data.code === "OK" && data.imageDocumentDetected) {
+        console.log(data);
         dispatch({ type: "okUploadFile", payload: data.imageDocumentDetected });
       }
     } catch (error) {
