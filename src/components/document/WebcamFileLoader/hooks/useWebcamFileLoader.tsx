@@ -6,7 +6,7 @@ export const useWebcamFileLoader = () => {
   const webcamRef = useRef(null);
   const { uploadFile } = useDocumentContext();
   const [showWebcam, setShowWebcam] = useState(false);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth < 550 ? window.innerWidth : 550);
 
   useEffect(() => {
     window.addEventListener("resize", updateScreenWidth);

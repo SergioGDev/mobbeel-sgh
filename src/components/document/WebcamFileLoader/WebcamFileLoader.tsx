@@ -18,10 +18,10 @@ const WebcamFileLoader = () => {
       {showWebcam && (
         <Webcam
           audio={false}
-          height={screenWidth * 0.5625}
           ref={webcamRef}
           screenshotFormat="image/jpeg"
           width={screenWidth < 550 ? screenWidth : 550}
+          height={screenWidth * 0.5625}
           videoConstraints={videoConstraints}
         />
       )}
